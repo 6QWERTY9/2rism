@@ -9,10 +9,10 @@ export const Hotelscardlayout: React.FC<CardProps> = ({img, title, location}) =>
         <h3 className={css.hotel_card_text_title}>{title}</h3>
         <div className={css.location}>
           <span>
-            <img src="/location.svg" alt="location icon" width={'16px'} height={'16px'} />
+            <img src={`${import.meta.env.BASE_URL}/location.svg`} alt="location icon" width={'16px'} height={'16px'} />
             {location}
           </span>
-          <img src="/rate.svg" alt="rating hotel" width={'88px'}  height={'16px'}/>
+          <img src={`${import.meta.env.BASE_URL}/rate.svg`} alt="rating hotel" width={'88px'}  height={'16px'}/>
         </div>
       </div>
     </div>

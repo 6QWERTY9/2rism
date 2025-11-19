@@ -79,7 +79,7 @@ const AboutUsSection = () => {
                             <Link to={'/about-us'} className={css.read_more_link}>Read more<ArrowSvg/></Link>
                         </div>
                     </div>
-                    <img src="/cards_img/about.png" alt="about us preview image" />
+                    <img src={`${import.meta.env.BASE_URL}/cards_img/about.png`} alt="about us preview image" />
                 </div>
             </Container>
         </section>

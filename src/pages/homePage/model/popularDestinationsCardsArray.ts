@@ -1,4 +1,5 @@
 import type { CardProps } from "@shared/cardProps"
+import { getAssetPath } from "@shared/lib/getPath"
 
 export const popularDestinationsCardArray: CardProps[] = [
     {img: '/cards_img/popularDestinations_img/1.png', title: 'Big Sur', location: 'California, USA'},
@@ -7,5 +8,7 @@ export const popularDestinationsCardArray: CardProps[] = [
     {img: '/cards_img/popularDestinations_img/4.png', title: 'Tucson', location: 'Arizona, USA'},
     {img: '/cards_img/popularDestinations_img/5.png', title: 'St. Joseph', location: 'Michigan, USA'},
     {img: '/cards_img/popularDestinations_img/6.png', title: 'Madrid', location: 'Spain'},
-
-]
+].map(card => ({
+    ...card,
+    img: getAssetPath(card.img)
+}))

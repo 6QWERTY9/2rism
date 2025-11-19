@@ -12,15 +12,15 @@ export const Blogcardlayout: React.FC<blogCardProps> = ({img, title, date, desc,
         </p>
         <div className={css.blog_card_text_about_post}>
           <span className={css.date}>
-            <img src="/date.svg" alt=" date icon" width={'16px'} height={'16px'}/>
+            <img src={`${import.meta.env.BASE_URL}/date.svg`} alt=" date icon" width={'16px'} height={'16px'}/>
             {date}
           </span>
           <span className={css.author}>
-            <img src="/user.svg" alt="user vetor icon" width={'16px'} height={'16px'}/>
+            <img src={`${import.meta.env.BASE_URL}/user.svg`} alt="user vetor icon" width={'16px'} height={'16px'}/>
             {author}
           </span>
           <span className={css.comments}>
-            <img src="/comments.svg" alt="comments icon" width={'16px'} height={'16px'}/>
+            <img src={`${import.meta.env.BASE_URL}/comments.svg`}alt="comments icon" width={'16px'} height={'16px'}/>
             {comments}
           </span>
         </div>
