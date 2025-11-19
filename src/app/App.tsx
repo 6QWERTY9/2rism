@@ -1,3 +1,5 @@
+import { Header } from "@shared/components/header"
+import { BrowserRouter } from "react-router-dom"
 
 
 
@@ -5,9 +7,9 @@ function App() {
   
 
   return (
-    <>
-      init project
-    </>
+    <BrowserRouter>
+      <Header/>
+    </BrowserRouter>
   )
 }
 
