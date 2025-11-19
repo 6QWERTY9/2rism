@@ -1,0 +1,34 @@
+# .github/workflows/deploy.yml
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Запускать этот скрипт при пуше в ветку main (или master)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4 # Скачивает ваш исходный код из репозитория
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # Используйте версию Node.js, которая вам нужна
+
+    - name: Install dependencies
+      run: npm install # Устанавливает зависимости проекта
+
+    - name: Build project
+      run: npm run build # СОЗДАЕТ ПАПКУ dist
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist # Указывает, какую папку нужно развернуть
+        publish_branch: gh-pages # Пушит содержимое dist в отдельную ветку gh-pages
