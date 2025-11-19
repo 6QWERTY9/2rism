@@ -5,6 +5,11 @@ on:
     branches:
       - main # Запускать при пуше в основную ветку
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write # <-- Это критически важное разрешение
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
