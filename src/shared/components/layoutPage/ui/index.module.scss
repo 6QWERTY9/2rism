@@ -1,0 +1,10 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .main {
+        max-width: 1920px;
+        width: 100%;
+        flex-grow: 1;
+    }
+}
