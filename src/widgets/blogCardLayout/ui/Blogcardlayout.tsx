@@ -1,5 +1,6 @@
 import type { blogCardProps } from '../model'
-import css from './index.module.scss'
+import css from './index.module.scss';
+// commit
 
 export const Blogcardlayout: React.FC<blogCardProps> = ({img, title, date, desc, author, comments}) => {
   return (
