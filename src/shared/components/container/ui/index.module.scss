@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    max-width: 1360px;
+    height: 100%;
+    background: transparent;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 23px;
+    justify-self: center;
+}

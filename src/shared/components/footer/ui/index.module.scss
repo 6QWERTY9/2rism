@@ -20,6 +20,7 @@
         @include textStyle($color: #979797);
         .title {
             @include textStyle($color: $black, $size: 18px, $weight: 500, $lineHeight: 28px);
+            user-select: none;
         }
         ul {
             list-style: none;

@@ -1,5 +1,5 @@
-import { Footer } from "@shared/components/footer"
-import { Header } from "@shared/components/header"
+import { HeroSection } from "@shared/components/ heroSection"
+
 import { BrowserRouter } from "react-router-dom"
 
 
@@ -9,8 +9,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header/>
-      <Footer/>
+      
+      <HeroSection/>
+      
     </BrowserRouter>
   )
 }

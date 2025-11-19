@@ -1,0 +1,68 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/vars' as *;
+
+.here_section {
+    width: 100vw;
+    height: 822px;
+
+    background: url('/public/bg-image.webp');
+
+    border-radius: 0px 0px 44px 44px;
+
+    .here_section_main_content {
+        width: 100%;
+        height: 536px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+
+        .here_section_main_content_title {
+            display: flex;
+            width: 100%;
+            height: 58px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            @include textStyle($size:48px, $weight: 600);
+        }
+
+        .open_globe {
+            max-width: 272px;
+            max-height: 72px;
+
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            background: $purple;
+            border-radius: 12px;
+
+            @include textStyle($size: 18px, $weight: 600, $lineHeight: 18px);
+
+            cursor: pointer;
+
+            transition: all 150ms ease-in-out;
+
+            &:hover {
+                background: $white;
+                color: $purple;
+
+                border: 2px solid $purple;
+
+
+                & > svg {
+                    fill: $purple;
+                }
+            }
+        }
+    }
+}
