@@ -1,4 +1,15 @@
-export const footerNavContent = [
+interface footerNavContentProps {
+    id: string,
+    title: string,
+    links: LinksType[]
+}
+
+type LinksType = {
+    to: string,
+    title: string
+}
+
+export const footerNavContent: footerNavContentProps[] = [
     {
         id: 'about-section',
         title: 'About',

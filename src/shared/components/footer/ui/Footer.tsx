@@ -11,19 +11,19 @@ export const Footer = () => {
       <div className={css.footer_content}>
         <ul className={css.footer_slogan_content}>
           <li className={css.footer_slogan}>
-            <img src="./logo-black.svg" alt="logo 2rism" className={css.footer_logo} />
+            <img src="/logo-black.svg" alt="our logo 2rism" className={css.footer_logo} width={'87px'} height={'35px'} />
             <p>We always make our customers happy by providing as many choises as possible</p>
           </li>
           <ul className={css.social_links}>
-            <Link to={'https://www.facebook.com/?locale=ru_RU'}>
-              <img src="./social/facebook.svg" alt="our social contact facebool" />
-            </Link>
-            <Link to={'https://x.com/?lang=ru'}>
-              <img src="./social/twitter.svg" alt="our social contact twitter" />
-            </Link>
-            <Link to={'https://www.instagram.com/'}>
-              <img src="./social/instagram.svg" alt="our social contact instagram" />
-            </Link>
+            <a href={'https://www.facebook.com/?locale=ru_RU'} target='_blank' rel='noopener noreferrer' aria-label='our facebook'>
+              <img src="/social/facebook.svg" alt="our social contact facebool" width={'32px'} height={'32px'} />
+            </a>
+            <a href={'https://x.com/?lang=ru'} target='_blank' rel='noopener noreferrer' aria-label='our twitter'>
+              <img src="/social/twitter.svg" alt="our social contact twitter" width={'32px'} height={'32px'} />
+            </a>
+            <a href={'https://www.instagram.com/'} target='_blank' rel='noopener noreferrer' aria-label='our instagram'>
+              <img src="/social/instagram.svg" alt="our social contact instagram" width={'32px'} height={'32px'} />
+            </a>
           </ul>
         </ul>
 
@@ -45,7 +45,7 @@ const FooterNav = () => {
           <ul className={css.footer_nav_content_links_wrapper}>
             {items.links.map((link) => (
               <li className={css.footer_nav_content_link} key={link.to}>
-                <Link to={link.to}>{link.title}</Link>
+                <Link to={link.to} aria-label={`link to page with information - ${link.title}`}>{link.title}</Link>
               </li>
             ))}
           </ul>

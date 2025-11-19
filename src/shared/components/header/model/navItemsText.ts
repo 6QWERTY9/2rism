@@ -1,0 +1,1 @@
+export const navItemsText: string[] = ['home', 'hotels', 'restaurants', 'tours', 'destinations', 'activities', 'contact',]
