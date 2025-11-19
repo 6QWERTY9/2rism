@@ -1,0 +1,47 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/vars' as *;
+
+
+.section_layout {
+    width: 100%;
+    height: 610px;
+    margin-top: 20px;
+
+    .section_layout_content {
+        display: grid;
+        align-items: center;
+
+        .section_layout_top_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-self: end;
+            
+            .view_all_link {
+                @include textStyle($size: 16px, $weight: 400, $color: $purple);
+                max-width: 105px;
+                width: 100%;
+                height: 40px;
+
+                display: flex;
+                gap: 2px;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 8px;
+
+                background: rgba(246, 244, 255, 1);
+                transition: all 150ms ease-in-out;
+
+                &:hover {
+                    background-color: $purple;
+                    color: $white;
+
+                    & > svg > g > path {
+                        fill: #fff  ;
+                    }
+                }
+            }
+        }
+    }
+}

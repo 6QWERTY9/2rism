@@ -1,0 +1,29 @@
+@use '../../../shared/styles/vars' as *;
+@use '../../../shared/styles/mixins' as *;
+
+.hotel_card_layout {
+    max-width: 316px;
+    height: 440px;
+
+    user-select: none;
+
+    .hotel_card_text {
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+
+        
+
+        .hotel_card_text_title {
+            @include textStyle($size: 16px, $weight: 500, $color: $black)
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include textStyle( $color: rgba(151, 151, 151, 1))
+        }
+    }
+}

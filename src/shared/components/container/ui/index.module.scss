@@ -5,7 +5,8 @@
     background: transparent;
 
     display: grid;
-    grid-auto-rows: max-content;
+    grid-auto-flow: row;
+    
     gap: 23px;
     justify-self: center;
 }

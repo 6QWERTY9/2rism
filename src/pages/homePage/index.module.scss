@@ -1,0 +1,78 @@
+@use '../../shared/styles/mixins' as *;
+@use '../../shared/styles/vars' as *;
+
+.popular_destinations_cards {
+    display: flex;
+
+    gap: 32px;
+    user-select: none;
+}
+
+.hotels_cards {
+    display: flex;
+    gap: 32px;
+    margin-top: 112px;
+}
+
+.blog_cards {
+    display: flex;
+    gap: 32px;
+    margin-top: 112px;
+}
+
+.about_us_content {
+    display: flex;
+    gap: 42px;
+    max-width: 1128px;
+    height: 488px;
+    width: 100%;
+    
+    justify-self: center;
+    margin-top: 112px;
+    align-items: center;
+    .about_us_text_content {
+        .about_us_text {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            h3 {
+                @include textStyle($size: 36px, $weight: 600, $color: $black, $lineHeight: 48px);
+            }
+
+            p {
+                @include textStyle($size: 16px, $weight: 400, $color: rgba(91, 91, 91, 1), $lineHeight: 32px);
+            }
+            .read_more_link {
+                @include textStyle($size: 16px, $weight: 400, $color: $purple, $lineHeight: 16px);
+                max-width: 135px;
+                width: 100%;
+                height: 40px;
+        
+                display: flex;
+                gap: 2px;
+                align-items: center;
+                justify-content: center;
+        
+                border-radius: 8px;
+        
+                background: rgba(246, 244, 255, 1);
+                transition: all 150ms ease-in-out;
+        
+                &:hover {
+                    background-color: $purple;
+                    color: $white;
+        
+                    & > svg > g > path {
+                        fill: #fff  ;
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+}
